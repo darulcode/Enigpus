@@ -8,11 +8,11 @@ public class Magazine extends Book{
     private String periodPublish;
     private Integer publishYear;
 
-    public Magazine(String title, String periodPublish) {
-        this.codeBook = Utility.generateMagazineCode();
+    public Magazine(String title, String periodPublish, Integer year) {
+        this.codeBook = year + Utility.generateMagazineCode();
         this.title = title;
         this.periodPublish = periodPublish;
-        this.publishYear = Utility.currentYear();
+        this.publishYear = year;
     }
 
     public void setTitle(String title) {

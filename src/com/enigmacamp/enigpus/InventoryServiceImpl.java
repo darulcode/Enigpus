@@ -12,15 +12,17 @@ public class InventoryServiceImpl implements InventoryService {
         ConsoleDisplay.listTypeBook();
         Integer input = Utility.inputInteger("Pilih jenis buku : ");
         if (input == 1) {
-            String title = Utility.inputString("Masukan Judul Novel : ");
-            String publisher = Utility.inputString("Masukan nama penerbit : ");
-            String author = Utility.inputString("Masukan penulis novel : ");
-            Book book = new Novel(title, publisher, author);
+            String title = Utility.validationInputTitle();
+            String publisher = Utility.validationInputPublisher();
+            String author = Utility.validationInputAuthor();
+            Integer year = Utility.validationInputYear();
+            Book book = new Novel(title, publisher, author, year);
             books.add(book);
         } else if (input == 2) {
-            String title = Utility.inputString("Masukan Judul Majalah : ");
-            String period = Utility.inputString("Periode terbit (Mingguan, bulanan) : ");
-            Book book = new Magazine(title, period);
+            String title = Utility.validationInputTitle();
+            String period = Utility.validationInputPeriod();
+            Integer year = Utility.validationInputYear();
+            Book book = new Magazine(title, period, year);
             books.add(book);
         } else {
             System.out.println("Pilih antara 1 atau 2 saja ");

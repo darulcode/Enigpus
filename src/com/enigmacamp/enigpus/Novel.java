@@ -11,11 +11,11 @@ public class Novel extends Book{
     private Integer publishDate;
     private String author;
 
-    public Novel(String title, String publisher, String author) {
-        this.codeBook = Utility.generateNovelCode();
+    public Novel(String title, String publisher, String author, Integer year) {
+        this.codeBook = year + Utility.generateNovelCode();
         this.title = title;
         this.publisher = publisher;
-        this.publishDate = Utility.currentYear();
+        this.publishDate = year;
         this.author = author;
     }
 
