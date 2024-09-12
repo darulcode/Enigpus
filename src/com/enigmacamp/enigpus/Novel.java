@@ -16,9 +16,6 @@ public class Novel extends Book{
         this.author = author;
     }
 
-    private void inputIntoFile() {
-
-    }
 
     public void setCodeBook(String code) {
         this.codeBook = code;
@@ -33,17 +30,6 @@ public class Novel extends Book{
                 "\nTahun terbit : " + publishDate +
                 "\nPenulis : " + author + "\n";
     }
-
-
-    public String stringFIle() {
-        return "Jenis Buku : Novel," +
-                "Kode Buku : " + codeBook +
-                 ",Judul Buku : " + title +
-                ",Penerbit : " + publisher +
-                ",Tahun terbit : " + publishDate +
-                ",Penulis : " + author;
-    }
-
 
     @Override
     public boolean equals(Object o) {
