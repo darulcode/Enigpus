@@ -15,25 +15,6 @@ public class Magazine extends Book{
         this.publishYear = year;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getPeriodPublish() {
-        return periodPublish;
-    }
-
-    public void setPeriodPublish(String periodPublish) {
-        this.periodPublish = periodPublish;
-    }
-
-    public Integer getPublishYear() {
-        return publishYear;
-    }
-
-    public void setPublishYear(Integer publishYear) {
-        this.publishYear = publishYear;
-    }
 
     @Override
     public String toString() {

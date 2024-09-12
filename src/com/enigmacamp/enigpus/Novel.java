@@ -29,33 +29,6 @@ public class Novel extends Book{
                 "\nPenulis : " + author + "\n";
     }
 
-    public Integer getPublishDate() {
-        return publishDate;
-    }
-
-    public void setPublishDate(Integer publishDate) {
-        this.publishDate = publishDate;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     @Override
     public boolean equals(Object o) {
