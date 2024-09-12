@@ -48,6 +48,7 @@ public class InventoryServiceImpl implements InventoryService {
         ConsoleDisplay.headerSubMenu("Mencari Buku Berdasarkan Kode Buku");
         String input = Utility.inputString("Masukan Kode Buku : ");
         for (Book book : books) {
+            System.out.println(book.getCode());
             if (book.getCode().equals(input)) {
                 System.out.println(book);
                 return;

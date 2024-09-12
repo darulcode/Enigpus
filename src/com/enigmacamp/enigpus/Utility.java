@@ -37,9 +37,11 @@ public class Utility {
             value = scanner.nextInt();
         } catch (Exception e) {
             System.out.println("Inputan harus angka");
-            inputInteger(message);
         }
         scanner.nextLine();
+        if ( value == null) {
+            return inputInteger(message);
+        }
         return value;
     }
 
@@ -95,10 +97,9 @@ public class Utility {
         Boolean counter = true;
         Integer year = 0;
         while(counter){
-            year = inputInteger("Masukan Tahun Terbit Buku ): ");
+            year = inputInteger("Masukan Tahun Terbit Buku : ");
             if (year > 2024){
                 System.out.println("Masukan Tahun Terbit Buku maksimal 2024.");
-                break;
             } else counter = false;
         }
         return year;
