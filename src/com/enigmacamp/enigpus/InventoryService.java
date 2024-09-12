@@ -4,6 +4,6 @@ public interface InventoryService {
     void addBook();
     void searchBookByTitle();
     void searchBookByCode();
-    void deleteBookByCode();
+    void deleteBookByCode(String code);
     void getAllBook();
 }

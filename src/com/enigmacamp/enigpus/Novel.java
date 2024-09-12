@@ -20,6 +20,10 @@ public class Novel extends Book{
 
     }
 
+    public void setCodeBook(String code) {
+        this.codeBook = code;
+    }
+
     @Override
     public String toString() {
         return "Jenis Buku : Novel\n" +

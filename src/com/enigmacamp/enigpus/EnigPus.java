@@ -21,7 +21,10 @@ public class EnigPus {
                     break;
                 case 4:
                     //TODO: Menghapus buku berdasarkan kode
-                    inventoryServiceImpl.deleteBookByCode();
+                    ConsoleDisplay.headerSubMenu("Menghapus Buku Berdasarkan Kode Buku");
+                    String code = Utility.inputString("Masukan Kode Buku : ");
+                    inventoryServiceImpl.deleteBookByCode(code);
+                    EnigPusFile.deleteLine(code);
                     break;
                 case 5:
                     //TODO: Menampilkan semua buku

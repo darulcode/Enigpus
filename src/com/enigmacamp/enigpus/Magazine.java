@@ -25,6 +25,10 @@ public class Magazine extends Book{
                 "\nTahun terbit : " + publishYear + "\n";
     }
 
+    public void setCodeBook(String codeBook) {
+        this.codeBook = codeBook;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryServiceImpl implements InventoryService {
-    private List<Book> books= new ArrayList<>();
+    private List<Book> books= EnigPusFile.importBooksFromFIle();
     
     @Override
     public void addBook() {
@@ -59,11 +59,9 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
     @Override
-    public void deleteBookByCode() {
-        ConsoleDisplay.headerSubMenu("Menghapus Buku Berdasarkan Kode Buku");
-        String input = Utility.inputString("Masukan Kode Buku : ");
+    public void deleteBookByCode(String codeBook) {
         for (Book book : books) {
-            if(book.getCode().equals(input)) {
+            if(book.getCode().equals(codeBook)) {
                 books.remove(book);
                 System.out.println("Buku Berhasil Dihapus");
                 return;
