@@ -1,6 +1,7 @@
 package com.enigmacamp.enigpus;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -84,10 +85,11 @@ public class Utility {
         String period = "";
         while(counter){
             period = Utility.inputString("Periode terbit (Mingguan, bulanan) : ");
-            if(!period.equals("Mingguan") || !period.equals("bulanan")){
+            if(period.equals("Mingguan") || period.equals("Bulanan")){
                 counter = false;
-            } else
+            } else {
                 System.out.println("Periode terbit hanya Mingguan dan Bulanan.");
+            }
         }
         return period;
     }
@@ -102,6 +104,16 @@ public class Utility {
             } else counter = false;
         }
         return year;
+    }
+
+    public static void inputTofile(Book book){
+        List<String> booksStr = List.of(book.toString().split("\n"));
+        StringBuilder result = new StringBuilder();
+        for (String s : booksStr) {
+            result.append(s).append(",");
+        }
+        result.setLength(result.length() - 1);
+        EnigPusFile.writeFile(result.toString(),true);
     }
 
 

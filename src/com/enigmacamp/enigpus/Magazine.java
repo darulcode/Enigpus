@@ -18,7 +18,7 @@ public class Magazine extends Book{
 
     @Override
     public String toString() {
-        return "\nJenis Buku : Majalah\n" +
+        return "Jenis Buku : Majalah\n" +
                 "Kode Buku : " + codeBook +
                 "\nJudul Buku : " + title +
                 "\nPeriode Terbit : " + periodPublish +
@@ -40,11 +40,11 @@ public class Magazine extends Book{
 
     @Override
     String getCode() {
-        return "";
+        return codeBook;
     }
 
     @Override
     String getTitle() {
-        return "";
+        return title;
     }
 }

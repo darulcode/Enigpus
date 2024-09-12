@@ -17,12 +17,14 @@ public class InventoryServiceImpl implements InventoryService {
             String author = Utility.validationInputAuthor();
             Integer year = Utility.validationInputYear();
             Book book = new Novel(title, publisher, author, year);
+            Utility.inputTofile(book);
             books.add(book);
         } else if (input == 2) {
             String title = Utility.validationInputTitle();
             String period = Utility.validationInputPeriod();
             Integer year = Utility.validationInputYear();
             Book book = new Magazine(title, period, year);
+            Utility.inputTofile(book);
             books.add(book);
         } else {
             System.out.println("Pilih antara 1 atau 2 saja ");
@@ -48,7 +50,6 @@ public class InventoryServiceImpl implements InventoryService {
         ConsoleDisplay.headerSubMenu("Mencari Buku Berdasarkan Kode Buku");
         String input = Utility.inputString("Masukan Kode Buku : ");
         for (Book book : books) {
-            System.out.println(book.getCode());
             if (book.getCode().equals(input)) {
                 System.out.println(book);
                 return;

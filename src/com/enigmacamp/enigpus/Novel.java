@@ -1,8 +1,5 @@
 package com.enigmacamp.enigpus;
-
-import java.util.Date;
 import java.util.Objects;
-import java.util.UUID;
 
 public class Novel extends Book{
     private String codeBook;
@@ -19,6 +16,10 @@ public class Novel extends Book{
         this.author = author;
     }
 
+    private void inputIntoFile() {
+
+    }
+
     @Override
     public String toString() {
         return "Jenis Buku : Novel\n" +
@@ -27,6 +28,16 @@ public class Novel extends Book{
                 "\nPenerbit : " + publisher +
                 "\nTahun terbit : " + publishDate +
                 "\nPenulis : " + author + "\n";
+    }
+
+
+    public String stringFIle() {
+        return "Jenis Buku : Novel," +
+                "Kode Buku : " + codeBook +
+                 ",Judul Buku : " + title +
+                ",Penerbit : " + publisher +
+                ",Tahun terbit : " + publishDate +
+                ",Penulis : " + author;
     }
 
 
